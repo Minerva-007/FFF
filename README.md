@@ -4,7 +4,7 @@ Form Factor Finder is a C++ program that finds the form factor for geometries ex
 In a system undergoing radiative transfer, it is essential to know what percentage of radiation emitted from one surface reaches the other. This is called the Form Factor of the configuration.
 Form factor is important in heat transfer since it is also a type of efficiency (and engineers have a thing for efficiencies).
 
-##There are two ways of finding Form Factor.
+## There are two ways of finding Form Factor.
 
 * Analytical solution
 
