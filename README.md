@@ -7,9 +7,11 @@ Form factor is important in heat transfer since it is also a type of efficiency 
 ##There are two ways of finding Form Factor.
 
 * Analytical solution
+
 There exists calculus which determines the form factor by implementing path integrals. Further analysis is done by using Reciprocity theorem.
 
 * Engineer's 1337 hax0r
+
 Since it is a measure of how much radiation emitted by surface A hits surface B, one can simulate radiations leaving one surface and checking if these ever hit the other side.
 More rays of radiation tested + more variation in direction of emission = better estimation of form factor.
 
