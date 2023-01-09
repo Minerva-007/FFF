@@ -19,6 +19,7 @@ public:
 	{
 		return atan2(y2-y1,x2-x1)*180/3.141592;
 	}
+	double FFF(line);
 };
 
 class vector{
@@ -81,25 +82,31 @@ public:
 	}
 };
 
-int main()
+double line::FFF(line l2)
 {
-	line l1(0.0,0.0,10.0,0.0);
-	line l2(0.0,1.0,10.0,1.0);
-	double mm = l1.findnormal();
-	int c=0,it=0;
-	for(double a=0.0;a<1.0;a=a+0.05)
-	{
-		for(signed int i=-88;i<88;i=i+2,it++)
-		{
-			double t = mm + (double)i/180*3.141592;
-			double xx=l1.retx1()+a*(l1.retx2()-l1.retx1());
-			double yy=l1.rety1()+a*(l1.rety2()-l1.rety1());
-			vector v( xx,yy,xx+cos(t),yy+sin(t) );
-			bool res=v.intersectdesuka(l2);
-			c = c+(res==true?1:0);
-		}
-	}
-	printf("%d %d %f\n",c,it,(double)c/it);
-	return 0;
+	 double mm = findnormal();
+         int c=0,it=0;
+         for(double a=0.0;a<1.0;a=a+0.02)
+         {
+                 for(signed int i=-89;i<89;i=i+1,it++)
+                 {
+                         double t = mm + (double)i/180*3.141592;
+                         double xx=x1+a*(x2-x1);
+                         double yy=y1+a*(y2-y1);
+                         vector v( xx,yy,xx+cos(t),yy+sin(t) );
+                         bool res=v.intersectdesuka(l2);
+                         c = c+(res==true?1:0);
+                 }
+         }
+         return (double)c/it;
 }
 
+
+int main()
+{
+	line l1(0.0,0.0,1.0,0.0);
+	line l2(0.0,0.0,1.0,1.0);
+	double F1=l1.FFF(l2), F2=l2.FFF(l1);
+	printf("%f\t%f\t%f\n",F1,F2,F1/F2);
+	return 0;
+}
