@@ -1,3 +1,5 @@
+*Release Notes*
+First prototype, needs a lot of work rn.
 # FFF what?
 Form Factor Finder is a C++ program that finds the form factor for geometries existing in two-dimension. 
 ## What's form factor?
