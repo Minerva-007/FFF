@@ -21,5 +21,5 @@ This program does the latter.
 The code contains the maths governing the simulation. Basically, a solution for intersection of a ray and a line is considered and then tested if the intersection point lies within the line segment. Count and then measure probability.
 
 
-Enjoy.
-- Minerva
+```Enjoy.
+- Minerva```
